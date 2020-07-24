@@ -22,7 +22,7 @@ loadSong(songs[songIndex]);
 function loadSong(song) {
   title.innerText = song;
   audio.src = `music/${song}.mp3`;
-  cover.src = `images/${song}.jpg`;
+  cover.src = `images/${song}.png`;
 }
 
 // Play song
@@ -54,6 +54,8 @@ function prevSong() {
   loadSong(songs[songIndex]);
 
   playSong();
+
+  document.body.style.backgroundColor = "#FFB266";
 }
 
 // Next song
@@ -67,6 +69,7 @@ function nextSong() {
   loadSong(songs[songIndex]);
 
   playSong();
+  document.body.style.backgroundColor = "#CCCCFF";
 }
 
 // Update progress bar
